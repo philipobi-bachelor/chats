@@ -444,6 +444,7 @@ Edited `tracking/v0Finding/fitter/include/NewV0Fitter.h`
      
      static const Config* s_config;
      };
+
 ```
 
 </details>
@@ -891,6 +892,7 @@ I have added Doxygen-style documentation to the `NewV0Fitter.h` file, adhering t
      
      static const Config* s_config;
      };
+
 ```
 
 </details>
@@ -1421,6 +1423,7 @@ I have added Doxygen-style documentation to the `NewV0Fitter.h` file, adhering t
    }
  }
  
+
 ```
 
 </details>

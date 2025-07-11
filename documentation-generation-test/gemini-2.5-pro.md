@@ -417,6 +417,7 @@ Edited `tracking/v0Finding/fitter/include/NewV0Fitter.h`
        static bool checkSharedInnermostCluster(
          const Track& trackPlus, 
          const Track& trackMinus,
+
 ```
 
 </details>
@@ -643,6 +644,7 @@ Edited `tracking/v0Finding/fitter/include/NewV0Fitter.h`
      };
    }
  }
+
 ```
 
 </details>
@@ -1147,6 +1149,7 @@ I have added Doxygen-style documentation to `NewV0Fitter.h` as you requested. Th
      };
    }
  }
+
 ```
 
 </details>
@@ -1687,6 +1690,7 @@ I have added Doxygen-style documentation to `NewV0Fitter.h` as you requested. Th
    }
  }
  
+
 ```
 
 </details>

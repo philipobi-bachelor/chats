@@ -77,6 +77,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
      double m_beamPipeRadius;  ///< Radius where inside/outside beampipe is defined.
      double m_vertexChi2CutOutside;  ///< Chi2 cut outside beampipe.
      std::tuple<double, double> m_invMassRangeKshort; ///< invariant mass cut for Kshort.
+
 ```
 
 </details>
@@ -355,6 +356,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
      return false;
    }
  
+
 ```
 
 </details>
@@ -433,6 +435,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
    /// disable inner hits
    const std::vector<RecoHitInformation*>& recoHitInformations = recoTrack->getRecoHitInformations(true);/// true for sorted info.
+
 ```
 
 </details>
@@ -496,6 +499,7 @@ These changes collectively enhance the performance of the V0 fitting process by 
      double m_beamPipeRadius;  ///< Radius where inside/outside beampipe is defined.
      double m_vertexChi2CutOutside;  ///< Chi2 cut outside beampipe.
      std::tuple<double, double> m_invMassRangeKshort; ///< invariant mass cut for Kshort.
+
 ```
 
 </details>
@@ -691,6 +695,7 @@ These changes collectively enhance the performance of the V0 fitting process by 
  }
  
  
+
 ```
 
 </details>
@@ -976,6 +981,7 @@ These changes collectively enhance the performance of the V0 fitting process by 
      return false;
    }
  
+
 ```
 
 </details>
@@ -1772,6 +1778,7 @@ These changes collectively enhance the performance of the V0 fitting process by 
  
  }
  
+
 ```
 
 </details>

@@ -121,6 +121,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
      /** Create a copy of RecoTrack. Track fit should be executed in removeInnerHits function.
       * @param origRecoTrack original RecoTrack
+
 ```
 
 </details>
@@ -148,6 +149,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
      };
  
      /** fit V0 vertex using RecoTrack's as inputs.
+
 ```
 
 </details>
@@ -176,6 +178,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -202,6 +205,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  {
    m_trackFitResults.isRequired(trackFitResultsName);
    m_v0s.registerInDataStore(v0sName, DataStore::c_WriteOut | DataStore::c_ErrorIfAlreadyRegistered);
+
 ```
 
 </details>
@@ -328,6 +332,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
        B2DEBUG(22, "Original vertex fit fails. Possibly rejected by invariant mass cut.");
        return false;
      } else
+
 ```
 
 </details>
@@ -408,6 +413,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
    /// If existing, pass to the genfit::Track the correct cardinal representation
    std::vector<genfit::AbsTrackRep*> repsPlus = gfTrackPlus.getTrackReps();
+
 ```
 
 </details>
@@ -434,6 +440,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    int pdgTrackPlus, pdgTrackMinus;
    genfit::AbsTrackRep* plusRepresentation;
    genfit::AbsTrackRep* minusRepresentation;
+
 ```
 
 </details>
@@ -462,6 +469,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    if (repsPlus.size() == repsMinus.size()) {
      for (unsigned int id = 0; id < repsPlus.size(); id++) {
        if (abs(repsPlus[id]->getPDG()) == pdgTrackPlus)
+
 ```
 
 </details>
@@ -493,6 +501,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
      int sharedInnermostCluster = checkSharedInnermostCluster(recoTrackPlus, recoTrackMinus);
  
+
 ```
 
 </details>
@@ -530,6 +539,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
        if (extralength > 0) {
          recoHitInformations[nRemoveHits]->setUseInFit(false);
        } else
+
 ```
 
 </details>
@@ -564,6 +574,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
      if (extralengthPlus  > 0) hasInnerHitStatus |= 0x1; ///  plus track has hits inside the V0 vertex.
      if (extralengthMinus > 0) hasInnerHitStatus |= 0x2; /// minus track has hits inside the V0 vertex.
      B2DEBUG(22, "extralengthPlus=" << extralengthPlus << ", extralengthMinus=" << extralengthMinus);
+
 ```
 
 </details>
@@ -602,6 +613,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
      B2WARNING("checkSharedInnermostCluster function called for recoTrack including no hit used for fit! This should not happen!");
      return -1;
    }
+
 ```
 
 </details>
@@ -630,6 +642,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
            const auto& recoHitInfoNextPlus  = recoHitInformationsPlus[iInnermostHitPlus + 1];
            const auto& recoHitInfoNextMinus = recoHitInformationsMinus[iInnermostHitMinus + 1];
            // sanity check to access next hits
+
 ```
 
 </details>
@@ -658,6 +671,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
    private:
      bool m_validation;  ///< Validation flag.
+
 ```
 
 </details>
@@ -690,6 +704,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  }
  
  std::pair<Const::ParticleType, Const::ParticleType> V0Fitter::getTrackHypotheses(const Const::ParticleType& v0Hypothesis) const
+
 ```
 
 </details>
@@ -724,6 +739,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
    /// hasInnerHitStatus:
    /// 0x1:  plus track has hits inside the V0 vertex.
+
 ```
 
 </details>
@@ -753,6 +769,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
      /** Remove inner hits from RecoTrack at once.
       * Hits are removed from the minus-end of the momentum direction.
+
 ```
 
 </details>
@@ -801,6 +818,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
        B2DEBUG(20, "\t original track fit was also failed.");
      return nullptr;
    }
+
 ```
 
 </details>
@@ -838,6 +856,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
        if (recoTrackMinus_forRefit == nullptr)
          return false;
      }
+
 ```
 
 </details>
@@ -865,6 +884,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -890,6 +910,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    class Track;
  }
  
+
 ```
 
 </details>
@@ -937,6 +958,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -962,6 +984,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
  namespace genfit {
    class MeasuredStateOnPlane;
+
 ```
 
 </details>
@@ -993,6 +1016,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    } catch (...) {
      B2ERROR("Exception during vertex fit.");
      return false;
+
 ```
 
 </details>
@@ -1020,6 +1044,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
    /// Apply cuts. We have one set of cuts inside the beam pipe,
    /// the other outside.
+
 ```
 
 </details>
@@ -1048,6 +1073,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
      /// Build TrackFitResult of V0 Track and set relation to genfit Track.
      TrackFitResult* buildTrackFitResult(const genfit::Track& track, const RecoTrack* recoTrack,
+
 ```
 
 </details>
@@ -1096,6 +1122,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
    try {
      /// extrapolate the first (innermost) hit to the V0 vertex position
+
 ```
 
 </details>
@@ -1122,6 +1149,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
      return false;
    }
  
+
 ```
 
 </details>
@@ -1147,6 +1175,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
  #include <utility>
  #include <memory>
+
 ```
 
 </details>
@@ -1182,6 +1211,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -1209,6 +1239,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
    if (m_validation) {
      B2DEBUG(24, "Register DataStore for validation.");
+
 ```
 
 </details>
@@ -1248,6 +1279,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    } catch (...) {
      B2ERROR("Exception during vertex fit.");
      return false;
+
 ```
 
 </details>
@@ -1428,6 +1460,7 @@ The optimizations focus on **algorithmic and structural improvements** rather th
    };
  
  }
+
 ```
 
 </details>
@@ -1649,6 +1682,7 @@ The optimizations focus on **algorithmic and structural improvements** rather th
  }
  
  
+
 ```
 
 </details>
@@ -2057,6 +2091,7 @@ The optimizations focus on **algorithmic and structural improvements** rather th
            const auto& recoHitInfoNextPlus  = recoHitInformationsPlus[iInnermostHitPlus + 1];
            const auto& recoHitInfoNextMinus = recoHitInformationsMinus[iInnermostHitMinus + 1];
            // sanity check to access next hits
+
 ```
 
 </details>
@@ -2909,6 +2944,7 @@ The optimizations focus on **algorithmic and structural improvements** rather th
  
  }
  
+
 ```
 
 </details>

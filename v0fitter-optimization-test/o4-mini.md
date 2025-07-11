@@ -65,6 +65,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -96,6 +97,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  }
  
  namespace Belle2 {
+
 ```
 
 </details>
@@ -127,6 +129,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -164,6 +167,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    } catch (...) {
      B2ERROR("Exception during vertex fit.");
      return false;
+
 ```
 
 </details>
@@ -195,6 +199,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -242,6 +247,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
      return false;
    }
  
+
 ```
 
 </details>
@@ -302,6 +308,7 @@ These changes avoid unnecessary object creation/destruction and heap allocations
    };
  
  }
+
 ```
 
 </details>
@@ -491,6 +498,7 @@ These changes avoid unnecessary object creation/destruction and heap allocations
  }
  
  
+
 ```
 
 </details>
@@ -558,6 +566,7 @@ These changes avoid unnecessary object creation/destruction and heap allocations
      return false;
    }
  
+
 ```
 
 </details>
@@ -1280,6 +1289,7 @@ These changes avoid unnecessary object creation/destruction and heap allocations
  
  }
  
+
 ```
 
 </details>

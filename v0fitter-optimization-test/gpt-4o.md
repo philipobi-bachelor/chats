@@ -99,6 +99,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
    };
  
  }
+
 ```
 
 </details>
@@ -152,6 +153,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  }
  
  /// remove hits inside the V0 vertex position
+
 ```
 
 </details>
@@ -167,6 +169,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
 <details>
 
 ```diff
+
 ```
 
 </details>
@@ -191,6 +194,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    if (v0Hypothesis == Const::Kshort) {
      result = std::make_pair(Const::pion, Const::pion);
    } else if (v0Hypothesis == Const::photon) {
+
 ```
 
 </details>
@@ -225,6 +229,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  {
    m_trackFitResults.isRequired(trackFitResultsName);
    m_v0s.registerInDataStore(v0sName, DataStore::c_WriteOut | DataStore::c_ErrorIfAlreadyRegistered);
+
 ```
 
 </details>
@@ -252,6 +257,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    m_trackFitResults.isRequired(trackFitResultsName);
    m_v0s.registerInDataStore(v0sName, DataStore::c_WriteOut | DataStore::c_ErrorIfAlreadyRegistered);
    //Relation to RecoTracks from Tracks is already tested at the module level.
+
 ```
 
 </details>
@@ -312,6 +318,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    m_trackFitResults.isRequired(trackFitResultsName);
    m_v0s.registerInDataStore(v0sName, DataStore::c_WriteOut | DataStore::c_ErrorIfAlreadyRegistered);
    //Relation to RecoTracks from Tracks is already tested at the module level.
+
 ```
 
 </details>
@@ -343,6 +350,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
 +}
  
 +
+
 ```
 
 </details>
@@ -376,6 +384,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
 +  };
 +}
 +
+
 ```
 
 </details>
@@ -402,6 +411,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
      }
    };
  }
+
 ```
 
 </details>
@@ -428,6 +438,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
      }
    };
  }
+
 ```
 
 </details>
@@ -551,6 +562,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
      }
    };
  }
+
 ```
 
 </details>
@@ -598,6 +610,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
  #include <framework/logging/Logger.h>
  #include <framework/datastore/StoreArray.h>
+
 ```
 
 </details>
@@ -661,6 +674,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
 -}
 +#endif // PARTICLE_TYPE_HASH_H
  
+
 ```
 
 </details>
@@ -726,6 +740,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
  
  #endif // PARTICLE_TYPE_HASH_H
  
+
 ```
 
 </details>
@@ -808,6 +823,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
 -}
  
 -
+
 ```
 
 </details>
@@ -897,6 +913,7 @@ Edited `tracking/v0Finding/fitter/include/ParticleTypeHash.h`
  
  #endif // PARTICLE_TYPE_HASH_H
  
+
 ```
 
 </details>
@@ -955,6 +972,7 @@ Edited `tracking/v0Finding/fitter/include/V0Fitter.h`
  
  namespace genfit {
    class MeasuredStateOnPlane;
+
 ```
 
 </details>
@@ -1118,6 +1136,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    return true;
  }
  
+
 ```
 
 </details>
@@ -1368,6 +1387,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
      }
    }
  
+
 ```
 
 </details>
@@ -1738,6 +1758,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    TrackFitter fitter;
    if (!fitter.fit(*recoTrack, Const::ChargedStable(std::abs(trackPDG)))) {
      B2ERROR("Track fitting failed.");
+
 ```
 
 </details>
@@ -1898,6 +1919,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    TrackFitter fitter;
    if (!fitter.fit(*recoTrack, Const::ChargedStable(std::abs(trackPDG)))) {
      B2ERROR("Track fitting failed.");
+
 ```
 
 </details>
@@ -1964,6 +1986,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
          hitInfo->setUseInFit(false);
          ++nRemoveHits;
        }
+
 ```
 
 </details>
@@ -2200,6 +2223,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
    return true;
  }
  
+
 ```
 
 </details>
@@ -2226,6 +2250,7 @@ Edited `tracking/v0Finding/fitter/src/V0Fitter.cc`
  
      if (m_validation) {
        m_validationV0s.appendNew(std::make_pair(trackPlus, tfrPlusVtx),
+
 ```
 
 </details>
@@ -2278,6 +2303,7 @@ The `vertexFitWithRecoTracks` function has been optimized successfully, and the 
 +
 +#endif // PARTICLE_TYPE_HASH_H
 +
+
 ```
 
 </details>
@@ -2310,6 +2336,7 @@ The `vertexFitWithRecoTracks` function has been optimized successfully, and the 
 +
 +#endif // PARTICLE_TYPE_HASH_H
 +
+
 ```
 
 </details>
@@ -2699,6 +2726,7 @@ The `vertexFitWithRecoTracks` function has been optimized successfully, and the 
    return true;
  }
  
+
 ```
 
 </details>
@@ -3504,6 +3532,7 @@ The `vertexFitWithRecoTracks` function has been optimized successfully, and the 
  
  }
  
+
 ```
 
 </details>
@@ -3537,6 +3566,7 @@ The `vertexFitWithRecoTracks` function has been optimized successfully, and the 
    };
  
  }
+
 ```
 
 </details>
@@ -3726,6 +3756,7 @@ The `vertexFitWithRecoTracks` function has been optimized successfully, and the 
  }
  
  
+
 ```
 
 </details>
